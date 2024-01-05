@@ -14,6 +14,8 @@
         <!-- Scripts -->
         @vite(['resources/css/app.css', 'resources/js/app.js'])
 
+        <script src="{{asset ('js/app.js')}}" defer></script> {{-- สำหรับทำให้แทรก Javascrip ได้--}}
+
         <!-- Styles -->
         @livewireStyles
     </head>

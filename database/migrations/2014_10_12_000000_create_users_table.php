@@ -20,6 +20,7 @@ return new class extends Migration
             $table->rememberToken();
             $table->foreignId('current_team_id')->nullable();
             $table->string('profile_photo_path', 2048)->nullable();
+            $table->string('permission')->default('member'); //เมื่อสมัครเข้ามาใหม่ให้สิทธิ์เป็นผู้ใช้งาน member
             $table->timestamps();
         });
     }
