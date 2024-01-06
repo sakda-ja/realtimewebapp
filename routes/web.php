@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -15,7 +16,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('welcome');
-});
+})->name('indexwelcome');
 
 Route::middleware([
     'auth:sanctum',
@@ -26,5 +27,14 @@ Route::middleware([
         return view('dashboard');
     })->name('dashboard');
 });
+
+
+//สร้าง Route Group
+Route::prefix('dashboard')->middleware(['auth:sanctum',config('jetstream.auth_session'),'verified',])->group(function (){
+
+    Route::get('/user' , [UserController::class, 'index' ] )->name('user.index');
+
+});
+
 
 
