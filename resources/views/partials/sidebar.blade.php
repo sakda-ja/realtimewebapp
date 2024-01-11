@@ -73,10 +73,18 @@
                     Edit profile
                 </a>
 
-                <a class='flex items-center w-full p-3 text-red-500 transition duration-200 border-t border-gray-100 hover:bg-red-50' href="#">
+                <a class='flex items-center w-full p-3 text-red-500 transition duration-200 border-t border-gray-100 hover:bg-red-50' href="{{route ('welcome') }}">
                     <ion-icon class='mr-2' name="log-out-outline"></ion-icon>
                     Logout
                 </a>
+
+                <form method="POST" action="{{ route('logout') }}" x-data>
+                    @csrf
+                        <a class='flex items-center w-full p-3 text-lg text-red-500 transition duration-200 hover:bg-theme-secondary hover:bg-red-50'  href="{{ route('logout') }}" @click.prevent="$root.submit();">
+                                <ion-icon class='mr-2' name="log-out-outline"> </ion-icon>
+                                {{ __('ออกจากระบบ') }}
+                        </a>
+                </form>
 
             </div>
         </div>

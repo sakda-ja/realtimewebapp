@@ -1,13 +1,16 @@
+{{--หน้าแรกแดชบอร์ดไว้แสดงผล chartJS ไฟล์นี้ต้องอยู่ด้านนอกโฟลเดอร์สุด เพื่อที่จะได้ Login เข้ามาเจอเลย --}}
+
+
 @extends('layouts.dashboard')  {{-- เรียกมาส่งออกที่ไฟล์นี้--}}
 
 
 @section('content')
     <main>
-        <header class="flex justify-between items-center w-full">
+        <header class="flex items-center justify-between w-full">
             <div class="flex items-center">
                 <!-- if your user doesnt have any avatar, you can uncomment th code bellow -->
-                <!-- <span class="bg-theme-primary text-white py-3 px-4 rounded-full">M</span> -->
-                <img src="dist/img/mehrab.jpg" class="h-14 w-14 rounded-full" alt="User Avatar">
+                <!-- <span class="px-4 py-3 text-white rounded-full bg-theme-primary">M</span> -->
+                <img src="dist/img/mehrab.jpg" class="rounded-full h-14 w-14" alt="User Avatar">
 
                 <div class="ml-5">
                     <h4 class="font-bold">Hello Mehrab!</h4>
@@ -21,7 +24,7 @@
 
         <!-- Top cards section -->
         <section class="mt-6">
-            <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-4">
+            <div class="grid grid-cols-1 gap-4 md:grid-cols-2 xl:grid-cols-4">
                 <div class="card hover:shadow">
                     <div class="card-header">
                         <h5>View Our Job</h5>
@@ -31,8 +34,8 @@
                             </span>
                     </div>
                     <div class="card-body">
-                        <h6 class="font-bold inline-block">24.5k </h6>
-                        <span class="badge badge-danger inline-block">-21%</span>
+                        <h6 class="inline-block font-bold">24.5k </h6>
+                        <span class="inline-block badge badge-danger">-21%</span>
                     </div>
                 </div>
 
@@ -44,8 +47,8 @@
                             </span>
                     </div>
                     <div class="card-body">
-                        <h6 class="font-bold inline-block">24.5k </h6>
-                        <span class="badge badge-success inline-block">-21%</span>
+                        <h6 class="inline-block font-bold">24.5k </h6>
+                        <span class="inline-block badge badge-success">-21%</span>
                     </div>
                 </div>
 
@@ -57,8 +60,8 @@
                             </span>
                     </div>
                     <div class="card-body">
-                        <h6 class="font-bold inline-block">24.5k </h6>
-                        <span class="badge badge-yellow inline-block">-21%</span>
+                        <h6 class="inline-block font-bold">24.5k </h6>
+                        <span class="inline-block badge badge-yellow">-21%</span>
                     </div>
                 </div>
 
@@ -70,20 +73,20 @@
                             </span>
                     </div>
                     <div class="card-body">
-                        <h6 class="font-bold inline-block">24.5k </h6>
-                        <span class="badge badge-info inline-block">-21%</span>
+                        <h6 class="inline-block font-bold">24.5k </h6>
+                        <span class="inline-block badge badge-info">-21%</span>
                     </div>
                 </div>
             </div>
         </section>
 
         <!-- Second section -->
-        <section class="mt-6 grid grid-cols-1 lg:grid-cols-12 gap-4">
+        <section class="grid grid-cols-1 gap-4 mt-6 lg:grid-cols-12">
             <div class="lg:col-span-8">
                 <div class="card hover:shadow">
-                    <div class="card-header justify-between">
-                        <h5 class='font-bold flex items-center'>
-                            <ion-icon class='text-gray-400 mr-2' name="stats-chart"></ion-icon>
+                    <div class="justify-between card-header">
+                        <h5 class='flex items-center font-bold'>
+                            <ion-icon class='mr-2 text-gray-400' name="stats-chart"></ion-icon>
                             Website analytics
                         </h5>
 
@@ -98,9 +101,9 @@
             </div>
             <div class="lg:col-span-4">
                 <div class="card hover:shadow">
-                    <div class="card-header justify-between mb-4">
-                        <h5 class='font-bold flex items-center'>
-                            <ion-icon class='text-gray-400 mr-2' name="notifications"></ion-icon>
+                    <div class="justify-between mb-4 card-header">
+                        <h5 class='flex items-center font-bold'>
+                            <ion-icon class='mr-2 text-gray-400' name="notifications"></ion-icon>
                             Recent notifications
                         </h5>
 
@@ -108,38 +111,38 @@
                             <ion-icon name="ellipsis-horizontal"></ion-icon>
                         </button>
                     </div>
-                    <div class="card-body space-y-3">
+                    <div class="space-y-3 card-body">
 
-                        <div class="card card-bg-gray flex-card items-center">
-                                <span class="border py-1 px-2 border-gray-200 rounded-full mr-3">
+                        <div class="items-center card card-bg-gray flex-card">
+                                <span class="px-2 py-1 mr-3 border border-gray-200 rounded-full">
                                     <ion-icon class='mt-1' name="dice-outline"></ion-icon>
                                 </span>
                             <div>
-                                <div class="card-header text-lg font-bold">This notification title</div>
+                                <div class="text-lg font-bold card-header">This notification title</div>
                                 <div class="card-body">
                                     This is notification body, what do you think about it?
                                 </div>
                             </div>
                         </div>
 
-                        <div class="card card-bg-gray flex-card items-center">
-                                <span class="border py-1 px-2 border-gray-200 rounded-full mr-3">
+                        <div class="items-center card card-bg-gray flex-card">
+                                <span class="px-2 py-1 mr-3 border border-gray-200 rounded-full">
                                     <ion-icon class='mt-1' name="dice-outline"></ion-icon>
                                 </span>
                             <div>
-                                <div class="card-header text-lg font-bold">This notification title</div>
+                                <div class="text-lg font-bold card-header">This notification title</div>
                                 <div class="card-body">
                                     This is notification body, what do you think about it?
                                 </div>
                             </div>
                         </div>
 
-                        <div class="card card-bg-gray flex-card items-center">
-                                <span class="border py-1 px-2 border-gray-200 rounded-full mr-3">
+                        <div class="items-center card card-bg-gray flex-card">
+                                <span class="px-2 py-1 mr-3 border border-gray-200 rounded-full">
                                     <ion-icon class='mt-1' name="dice-outline"></ion-icon>
                                 </span>
                             <div>
-                                <div class="card-header text-lg font-bold">This notification title</div>
+                                <div class="text-lg font-bold card-header">This notification title</div>
                                 <div class="card-body">
                                     This is notification body, what do you think about it?
                                 </div>
@@ -148,8 +151,8 @@
 
                     </div>
 
-                    <div class="card-footer text-center">
-                        <a class='mt-4 block text-theme-primary hover:text-theme-darked-primary' href="#">View all</a>
+                    <div class="text-center card-footer">
+                        <a class='block mt-4 text-theme-primary hover:text-theme-darked-primary' href="#">View all</a>
                     </div>
                 </div>
             </div>
