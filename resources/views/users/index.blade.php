@@ -8,4 +8,17 @@
     <h4>ตาราง Livewire</h4>
     <livewire:user.user-index/> {{-- Livewire Render --}}
 
+
+
+
+
+
+
+
+
+
+
+
+
+
 @endsection

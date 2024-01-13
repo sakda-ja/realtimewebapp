@@ -7,6 +7,6 @@ class UserController extends Controller
 {
     public function index()
     {
-        return view ('users.index'); //folder -> users/index.blade.php
+        return view ('users.index');
     }
 }

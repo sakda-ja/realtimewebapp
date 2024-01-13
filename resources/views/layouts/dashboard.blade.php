@@ -7,12 +7,16 @@
     <title>{{ config('app.name', 'Laravel') }}</title>
     <link rel="preconnect" href="https://fonts.bunny.net">   <!-- Fonts -->
     <link rel="stylesheet" href="{{ asset ('admin-template/style.css') }}"><!-- Styles -->
+
     {{-- @vite(['resources/css/app.css', 'resources/js/app.js']) --}}   <!-- Scripts -->
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script> <!-- Icons pack -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js@3.7.0/dist/chart.min.js"></script><!-- ChartJS -->
     <script src="{{ asset ('js/app.js') }}" defer></script>    {{-- ทำให้แทรกภาษา JS ได้--}}
     <script src="{{ asset ('admin-template/dashboard.js') }}" defer> </script>{{-- หน้าแดชบอร์ด ทำ Toggle --}}
     <script src="{{ asset ('admin-template/dashboard-chart.js') }}" defer> </script> {{-- แผนภูมิJS ได้--}}
+
+
+
 
 
 @livewireStyles  <!-- Styles -->
